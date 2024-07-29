@@ -58,6 +58,11 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        .경고 {
+            color: red;
+            font-size: 12px;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body>
@@ -95,7 +100,8 @@
             <div class="폼그룹">
                 <label for="전화번호">전화번호</label>
                 <p style="font-size: 10px;">하이픈(-)은 빼고 입력해주세요</p>
-                <input type="text" id="전화번호" name="전화번호" pattern="\d*" required>
+                <input type="text" id="전화번호" name="전화번호" required>
+                <div id="경고전화번호" class="경고"></div>
             </div>
             <div class="폼그룹">
                 <label for="입시형태">입시형태</label>
@@ -216,6 +222,17 @@
     <script>
         document.getElementById('상담폼').onsubmit = function(e) {
             e.preventDefault();
+            var 전화번호Input = document.getElementById('전화번호');
+            var 경고전화번호 = document.getElementById('경고전화번호');
+            
+            if (전화번호Input.value.includes('-')) {
+                경고전화번호.textContent = '전화번호는 하이픈(-) 없이 입력해주세요.';
+                전화번호Input.focus(); // 포커스를 전화번호 입력란으로 이동
+                return false;
+            } else {
+                경고전화번호.textContent = '';
+            }
+            
             var formData = new FormData(document.getElementById('상담폼'));
             
             fetch('https://script.google.com/macros/s/AKfycbzvQLtKnJMTo6iTqGGJalg44MWtr4Khj8uFeaRejOs2ie6LF11jHbiYyO2eoXbTpPtL/exec', {
