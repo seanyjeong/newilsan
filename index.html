@@ -9,7 +9,7 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
-        .container {
+        .컨테이너 {
             max-width: 500px;
             margin: 0 auto;
             padding: 20px;
@@ -20,23 +20,29 @@
             text-align: center;
             font-size: 1.5em;
         }
-        .form-group {
+        .폼그룹 {
             margin-bottom: 15px;
         }
-        .form-group label {
+        .폼그룹 label {
             display: block;
             margin-bottom: 5px;
         }
-        .form-group input,
-        .form-group select {
+        .폼그룹 input,
+        .폼그룹 select {
             width: 100%;
             padding: 10px;
             box-sizing: border-box;
         }
-        .form-group select {
+        .폼그룹 select {
             appearance: none;
             -webkit-appearance: none;
             -moz-appearance: none;
+        }
+        .헤더이미지 {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
         }
         h2 {
             font-size: 1.2em;
@@ -55,47 +61,47 @@
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="컨테이너">
+        <img src="https://github.com/seanyjeong/supermax/blob/main/maxmax.png?raw=true" alt="일산맥스체대입시" class="헤더이미지">
         <h1>일산맥스체대입시 상담 신청</h1>
-        <form>
-            <div class="form-group">
-                <label for="name">이름</label>
-                <input type="text" id="name" name="name" required>
+        <form id="상담폼">
+            <div class="폼그룹">
+                <label for="이름">이름</label>
+                <input type="text" id="이름" name="이름" required>
             </div>
-            <div class="form-group">
-                <label for="gender">성별</label>
-                <select id="gender" name="gender" required>
+            <div class="폼그룹">
+                <label for="성별">성별</label>
+                <select id="성별" name="성별" required>
                     <option value="">선택하세요</option>
-                    <option value="male">남</option>
-                    <option value="female">여</option>
+                    <option value="남자">남</option>
+                    <option value="여자">여</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label for="school">학교명</label>
-                <input type="text" id="school" name="school" required>
+            <div class="폼그룹">
+                <label for="학교명">학교명</label>
+                <input type="text" id="학교명" name="학교명" required>
             </div>
-            <div class="form-group">
-                <label for="grade">학년</label>
-                <input type="number" id="grade" name="grade" min="1" max="12" required>
+            <div class="폼그룹">
+                <label for="학년">학년</label>
+                <input type="number" id="학년" name="학년" min="1" max="12" required>
             </div>
-            <div class="form-group">
-                <label for="phone">전화번호</label><p style="font-size: 10px;">하이픈(-)은 뺴고 입력해주세요</p>
-
-                <input type="text" id="phone" name="phone" pattern="\d*" required>
-            
+            <div class="폼그룹">
+                <label for="전화번호">전화번호</label>
+                <p style="font-size: 10px;">하이픈(-)은 빼고 입력해주세요</p>
+                <input type="text" id="전화번호" name="전화번호" pattern="\d*" required>
             </div>
-            <div class="form-group">
-                <label for="admissionType">입시형태</label>
-                <select id="admissionType" name="admissionType" required>
+            <div class="폼그룹">
+                <label for="입시형태">입시형태</label>
+                <select id="입시형태" name="입시형태" required>
                     <option value="">선택하세요</option>
-                    <option value="susi">수시</option>
-                    <option value="jungsi">정시</option>
+                    <option value="수시">수시</option>
+                    <option value="정시">정시</option>
                 </select>
             </div>
             <h2>내신등급</h2>
-            <div class="form-group">
-                <label for="gradeLevel">내신등급</label>
-                <select id="gradeLevel" name="gradeLevel" required>
+            <div class="폼그룹">
+                <label for="내신등급">내신등급</label>
+                <select id="내신등급" name="내신등급" required>
                     <option value="">선택하세요</option>
                     <option value="1">1등급</option>
                     <option value="2">2등급</option>
@@ -109,9 +115,9 @@
                 </select>
             </div>
             <h2>모의고사 등급</h2>
-            <div class="form-group">
-                <label for="korean">국어</label>
-                <select id="korean" name="korean" required>
+            <div class="폼그룹">
+                <label for="국어">국어</label>
+                <select id="국어" name="국어" required>
                     <option value="">선택하세요</option>
                     <option value="1">1등급</option>
                     <option value="2">2등급</option>
@@ -125,9 +131,9 @@
                     <option value="none">미응시</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label for="math">수학</label>
-                <select id="math" name="math" required>
+            <div class="폼그룹">
+                <label for="수학">수학</label>
+                <select id="수학" name="수학" required>
                     <option value="">선택하세요</option>
                     <option value="1">1등급</option>
                     <option value="2">2등급</option>
@@ -141,9 +147,9 @@
                     <option value="none">미응시</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label for="english">영어</label>
-                <select id="english" name="english" required>
+            <div class="폼그룹">
+                <label for="영어">영어</label>
+                <select id="영어" name="영어" required>
                     <option value="">선택하세요</option>
                     <option value="1">1등급</option>
                     <option value="2">2등급</option>
@@ -157,9 +163,9 @@
                     <option value="none">미응시</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label for="science1">탐구1</label>
-                <select id="science1" name="science1" required>
+            <div class="폼그룹">
+                <label for="탐구1">탐구1</label>
+                <select id="탐구1" name="탐구1" required>
                     <option value="">선택하세요</option>
                     <option value="1">1등급</option>
                     <option value="2">2등급</option>
@@ -173,9 +179,9 @@
                     <option value="none">미응시</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label for="science2">탐구2</label>
-                <select id="science2" name="science2" required>
+            <div class="폼그룹">
+                <label for="탐구2">탐구2</label>
+                <select id="탐구2" name="탐구2" required>
                     <option value="">선택하세요</option>
                     <option value="1">1등급</option>
                     <option value="2">2등급</option>
@@ -189,16 +195,31 @@
                     <option value="none">미응시</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label for="targetUniversity">목표 대학교</label>
-                <input type="text" id="targetUniversity" name="targetUniversity">
+            <div class="폼그룹">
+                <label for="목표대학교">목표 대학교</label>
+                <input type="text" id="목표대학교" name="목표대학교">
             </div>
-            <div class="form-group">
-                <label for="referral">추천인</label>
-                <input type="text" id="referral" name="referral">
+            <div class="폼그룹">
+                <label for="추천인">추천인</label>
+                <input type="text" id="추천인" name="추천인">
             </div>
             <button type="submit">신청하기</button>
         </form>
     </div>
+    <script>
+        document.getElementById('상담폼').onsubmit = function(e) {
+            e.preventDefault();
+            var formData = new FormData(document.getElementById('상담폼'));
+            
+            fetch('https://script.google.com/macros/s/AKfycbzvQLtKnJMTo6iTqGGJalg44MWtr4Khj8uFeaRejOs2ie6LF11jHbiYyO2eoXbTpPtL/exec', {
+                method: 'POST',
+                body: formData
+            }).then(response => response.text()).then(data => {
+                alert(data);
+            }).catch(error => {
+                alert('에러 발생: ' + error.message);
+            });
+        };
+    </script>
 </body>
 </html>
