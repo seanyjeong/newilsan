@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일산맥스 상담 신청</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 1.5em;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .form-group select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+        h2 {
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>일산맥스체대입시 상담 신청</h1>
+        <form>
+            <div class="form-group">
+                <label for="name">이름</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">성별</label>
+                <select id="gender" name="gender" required>
+                    <option value="">선택하세요</option>
+                    <option value="male">남</option>
+                    <option value="female">여</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="school">학교명</label>
+                <input type="text" id="school" name="school" required>
+            </div>
+            <div class="form-group">
+                <label for="grade">학년</label>
+                <input type="number" id="grade" name="grade" min="1" max="12" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">전화번호</label><p style="font-size: 10px;">하이픈(-)은 뺴고 입력해주세요</p>
+
+                <input type="text" id="phone" name="phone" pattern="\d*" required>
+            
+            </div>
+            <div class="form-group">
+                <label for="admissionType">입시형태</label>
+                <select id="admissionType" name="admissionType" required>
+                    <option value="">선택하세요</option>
+                    <option value="susi">수시</option>
+                    <option value="jungsi">정시</option>
+                </select>
+            </div>
+            <h2>내신등급</h2>
+            <div class="form-group">
+                <label for="gradeLevel">내신등급</label>
+                <select id="gradeLevel" name="gradeLevel" required>
+                    <option value="">선택하세요</option>
+                    <option value="1">1등급</option>
+                    <option value="2">2등급</option>
+                    <option value="3">3등급</option>
+                    <option value="4">4등급</option>
+                    <option value="5">5등급</option>
+                    <option value="6">6등급</option>
+                    <option value="7">7등급</option>
+                    <option value="8">8등급</option>
+                    <option value="9">9등급</option>
+                </select>
+            </div>
+            <h2>모의고사 등급</h2>
+            <div class="form-group">
+                <label for="korean">국어</label>
+                <select id="korean" name="korean" required>
+                    <option value="">선택하세요</option>
+                    <option value="1">1등급</option>
+                    <option value="2">2등급</option>
+                    <option value="3">3등급</option>
+                    <option value="4">4등급</option>
+                    <option value="5">5등급</option>
+                    <option value="6">6등급</option>
+                    <option value="7">7등급</option>
+                    <option value="8">8등급</option>
+                    <option value="9">9등급</option>
+                    <option value="none">미응시</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="math">수학</label>
+                <select id="math" name="math" required>
+                    <option value="">선택하세요</option>
+                    <option value="1">1등급</option>
+                    <option value="2">2등급</option>
+                    <option value="3">3등급</option>
+                    <option value="4">4등급</option>
+                    <option value="5">5등급</option>
+                    <option value="6">6등급</option>
+                    <option value="7">7등급</option>
+                    <option value="8">8등급</option>
+                    <option value="9">9등급</option>
+                    <option value="none">미응시</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="english">영어</label>
+                <select id="english" name="english" required>
+                    <option value="">선택하세요</option>
+                    <option value="1">1등급</option>
+                    <option value="2">2등급</option>
+                    <option value="3">3등급</option>
+                    <option value="4">4등급</option>
+                    <option value="5">5등급</option>
+                    <option value="6">6등급</option>
+                    <option value="7">7등급</option>
+                    <option value="8">8등급</option>
+                    <option value="9">9등급</option>
+                    <option value="none">미응시</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="science1">탐구1</label>
+                <select id="science1" name="science1" required>
+                    <option value="">선택하세요</option>
+                    <option value="1">1등급</option>
+                    <option value="2">2등급</option>
+                    <option value="3">3등급</option>
+                    <option value="4">4등급</option>
+                    <option value="5">5등급</option>
+                    <option value="6">6등급</option>
+                    <option value="7">7등급</option>
+                    <option value="8">8등급</option>
+                    <option value="9">9등급</option>
+                    <option value="none">미응시</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="science2">탐구2</label>
+                <select id="science2" name="science2" required>
+                    <option value="">선택하세요</option>
+                    <option value="1">1등급</option>
+                    <option value="2">2등급</option>
+                    <option value="3">3등급</option>
+                    <option value="4">4등급</option>
+                    <option value="5">5등급</option>
+                    <option value="6">6등급</option>
+                    <option value="7">7등급</option>
+                    <option value="8">8등급</option>
+                    <option value="9">9등급</option>
+                    <option value="none">미응시</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="targetUniversity">목표 대학교</label>
+                <input type="text" id="targetUniversity" name="targetUniversity">
+            </div>
+            <div class="form-group">
+                <label for="referral">추천인</label>
+                <input type="text" id="referral" name="referral">
+            </div>
+            <button type="submit">신청하기</button>
+        </form>
+    </div>
+</body>
+</html>
