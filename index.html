@@ -216,6 +216,8 @@
                 body: formData
             }).then(response => response.text()).then(data => {
                 alert(data);
+                // 폼을 초기화하여 리셋
+                document.getElementById('상담폼').reset();
             }).catch(error => {
                 alert('에러 발생: ' + error.message);
             });
