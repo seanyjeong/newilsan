@@ -221,7 +221,7 @@
     </div>
     <script>
         document.getElementById('상담폼').onsubmit = function(e) {
-            e.preventDefault();
+            e.preventDefault(); // 기본 제출 동작 방지
             var 전화번호Input = document.getElementById('전화번호');
             var 경고전화번호 = document.getElementById('경고전화번호');
             
@@ -240,6 +240,7 @@
                 body: formData
             }).then(response => response.text()).then(data => {
                 alert(data);
+                document.getElementById('상담폼').reset(); // 폼 초기화
             }).catch(error => {
                 alert('에러 발생: ' + error.message);
             });
